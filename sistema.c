@@ -15,3 +15,18 @@ main()
       		}
    	}
 
+	//diagonalizando
+	for(j=1; j<=n; j++)
+    {
+        for(i=1; i<=n; i++)
+        {
+            if(i!=j) // Pegando elementos Diferentes
+            {
+                c=A[i][j]/A[j][j];// operador para diagonalizar
+                for(k=1; k<=n+1; k++)
+                {
+                    A[i][k]=A[i][k]-c*A[j][k]; // fazendo para todas as linhase colunas
+                }
+            }
+        }
+    }
